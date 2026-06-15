@@ -137,6 +137,19 @@ Show locked states explicitly in the UI (🔒 + "あと N レッスン") — vis
 locked doors motivate more than hidden ones. The last lesson's CTA should
 flow straight into the quiz（「完了して確認テストへ ✓」）.
 
+**Estimated-time badges (⏱ 目安).** Learners need to plan, so give every Day
+(and each test) a time estimate and show it as a badge — on the Day card, the
+Day hero (with a lessons/check/practice breakdown), and each test header. Also
+surface a course total and a "1日 ◯◯ ペース if you finish in N days" line on
+the overview. Calibration that has worked: estimate per band (beginner vs.
+slightly-experienced), then publish the *average with a little headroom so
+~85% of people finish within it* — not the optimistic median. Hands-on
+practice tests run longer and vary more than lesson reading, so weight them
+heavier. Keep a single `formatMinutes()` helper (約X時間Y分 / 約X分) and a
+`dayTotalMinutes()` so every surface reads the same numbers. Pair the badges
+with a reassuring note that a slower multi-week pace is fine — the number is a
+guide, not a deadline.
+
 ### Step 4 — Add interactivity (the part that makes it "rich")
 
 Every non-summary lesson gets at least one visual block; every Step gets at
@@ -190,6 +203,9 @@ thing. Start from `templates/widget-skeleton.tsx`.
       include tests (e.g. "14/16" = 14 lessons + 2 tests).
 - [ ] Gating actually works: tests locked → complete lessons → quiz unlocks →
       pass → practice unlocks (click through this in preview).
+- [ ] Every Day + each test shows a ⏱ time estimate, the overview shows a
+      course total + per-day pace, and all surfaces use one formatMinutes /
+      dayTotalMinutes helper so the numbers never disagree.
 - [ ] Build passes; clicked through in preview; no console errors.
 
 ## Bundled resources

@@ -125,4 +125,8 @@ export type Day = {
   // テストパート：全レッスン完了→確認テスト解放→合格→実践テスト解放
   checkTest: QuizQuestion[]; // 📝 4〜6問、80%正解で合格・何度でも再挑戦可
   practiceTest: PracticeTest; // 🚀 合格でDAY完全クリア
+  // ⏱ 目安時間（分）。計画を立てやすくするためUIにバッジ表示する。
+  // 校正基準：「初心者〜少し経験者」の平均＋余裕（8割が収まる）。
+  // 実践テスト（手を動かす）はレッスンより重く・分散も大きいので厚めに。
+  estMinutes: { lessons: number; check: number; practice: number };
 };
