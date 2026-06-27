@@ -70,6 +70,14 @@ deploy dashboard, CRM screen).
 The pedagogy: rehearse in a safe replica, then transfer. Never send a beginner
 into a real tool cold.
 
+This archetype also fits **multi-stage processes**, not just single tools — e.g.
+a deploy flow (ローカル → git push → 自動ビルド → URL発行 → URLを叩く) where each
+chip advances on click and one stage auto-progresses (a build "spinner" that
+resolves after ~1.4s), ending by rendering the published page inside a mock
+browser. Almost every course ends with "ship it," so a publish simulation is a
+high-value reusable closer: it makes an invisible, intimidating step (デプロイ)
+concrete and visibly successful before the learner does it for real.
+
 ## 5. Gallery / comparison
 
 **Teaches:** taste, style vocabulary, good-vs-bad judgment
